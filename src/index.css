@@ -1,6 +1,165 @@
 @import "tailwindcss";
-html,
-body{
+:root{
+  --primary:#763F23;
+  --secondary:#d26922;
+  --tertary:#ff8f40;
+}
+@font-face {
+  font-family: anomia;
+  font-weight: 200;
+  src: url();
+}
+@font-face {
+  font-family: anomia;
+  font-weight: 500;
+  src: url();
+}
+@font-face {
+  font-family: anomia;
+  font-weight: 700;
+  src: url();
+}
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+html,body{
   width: 100%;
   height: 100%;
+}
+.screen{
+  width: 100%;
+  height: auto;
+  padding:1.1% 1%;
+  background-color: var(--primary);
+}
+nav{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d26922;
+  padding:1.2%;
+  border-radius: 5px;
+}
+nav h1{
+  color: white;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+nav button{
+  background-color: black;
+  color: white;
+  padding:0.4% 1% 0.4% 1%;
+  border-radius:4px ;
+  cursor: pointer;
+  font-weight: 800;
+}
+.middle{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40vh;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 1%;
+}
+.middle h1{
+  font-weight:600;
+  position: absolute;
+  top:8%;
+  left: 2%;
+  color:white;
+}
+.middle h2{
+  font-weight:600;
+  position: absolute;
+  top:14%;
+  left: 2%;
+  color:white;
+  font-size: 2.5em;
+}
+.middle h5{
+  font-weight:600;
+  position: absolute;
+  top:14%;
+  left: 13%;
+  color:white;
+  font-size: 2.5em;
+}
+.middle h3{
+  font-weight:600;
+  position: absolute;
+  bottom:6%;
+  left: 2%;
+  color:white;
+  font-size: 1.5em
+}
+.middle img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding:1.5% 2% 0% 5%;
+  gap:2rem;
+  align-items: flex-start;
+}
+.ele{
+  overflow: hidden;
+  width: 16vw;
+  aspect-ratio: 2/3;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 4px;
+  color: white;
+  background-color: #ff8f40; 
+}
+.ele h1{
+  position: absolute;
+  bottom: 1%;
+  right:1%;
+}
+.ele img{
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.ele:hover{
+  transform: scale(.96);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .main{
+    padding:3% 2% 0% 2%;
+    gap:.8rem
+  }
+  .ele{
+    width: 100%;
+    height: 30vh;
+  }
+  .middle{
+    height: 30vh;
+  }
+  nav h1{
+    font-size:1.2em;
+  }
+  .middle h3{
+    font-size: 1em;
+  }
+  .middle h5{
+  top:40%;
+  left: 1%;
+}
 }

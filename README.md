@@ -1,58 +1,122 @@
-# React + Vite
+# Productivity Development App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-# Animated Landing Page with GSAP and React
-
-A dynamic landing page built with React and GSAP animations, featuring a creative text mask reveal effect and parallax scrolling.
+A productivity web application built with React, Vite, and Tailwind CSS. Features include a To-Do List, Daily Planner, Motivation, Pomodoro Timer, and Daily Goals.
 
 ## Features
 
-- Text mask reveal animation using GSAP timeline
-- Parallax mouse movement effects
-- Smooth image transitions and scaling
+- Animated landing page with GSAP and React
+- To-Do List with add, complete, and delete functionality
 - Responsive design
-- Interactive background elements
+- Modern UI with Tailwind CSS
+- Routing with React Router
 
 ## Technologies Used
 
 - React
-- GSAP (GreenSock Animation Platform)
-- Tailwind CSS
 - Vite
+- Tailwind CSS
+- GSAP (GreenSock Animation Platform)
+- React Router
+- React Toastify
 
 ## Getting Started
 
-1. Clone the repository
-2. Install dependencies:
-```npm install```
-3. Run the development server:
-```npm run dev```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## Project Flow
+
+1. **Landing Page:**  
+   Users are greeted with an animated landing page (`HomePage`).
+
+2. **Navigation:**  
+   Users can navigate to different features using the app’s navigation.
+
+3. **To-Do List:**  
+   Users can add, complete, and delete tasks on the `/todo` route.
+
+4. **Other Features:**  
+   Additional features (like Pomodoro Timer, Motivation, etc.) can be accessed via their respective routes.
 
 ## Project Structure
 
-- `src/App.jsx` - Main application component with animations
-- `public/` - Static assets and images
-- Asset files required:
-  - bg.png
-  - sky.png
-  - girlbg.png
-  - ps5.png
-  - logo18.png
+```
+vite+projet/
+├── public/                  # Static assets and images
+├── src/
+│   ├── App.jsx              # Main application component with routing
+│   ├── Context/
+│   │   └── Wrapper.jsx      # Context provider for global state
+│   └── Router/
+│       ├── HomePage.jsx     # Landing page component
+│       ├── TodoList.jsx     # To-Do List component
+│       └── Hh.jsx           # Additional feature/component
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+## File Descriptions
+
+- **src/App.jsx**  
+  Main entry point for the React application.  
+  - Sets up routing using React Router.
+  - Routes:
+    - `/` → `HomePage` (Animated landing page)
+    - `/todo` → `TodoList` (To-Do List feature)
+    - `/hh` → `Hh` (Additional feature/component)
+
+- **src/Router/HomePage.jsx**  
+  Landing page component.  
+  - Displays the animated introduction using GSAP and React.
+  - Provides navigation to other features.
+
+- **src/Router/TodoList.jsx**  
+  To-Do List component.  
+  - Allows users to add, complete, and delete tasks.
+  - Manages task state and interactions.
+
+- **src/Router/Hh.jsx**  
+  Additional feature/component.  
+  - Placeholder for future features (e.g., Pomodoro Timer, Motivation, etc.).
+
+- **src/Context/Wrapper.jsx**  
+  Context provider for global state management.  
+  - Supplies shared state and functions to child components.
+
+- **public/**  
+  Contains static assets and images used throughout the app.
+
+- **.gitignore**  
+  Specifies files and directories to be ignored by Git (e.g., `node_modules`, build outputs, editor configs).
+
+- **README.md**  
+  Project documentation, setup instructions, and file descriptions.
+
+---
+
+You can expand these descriptions as your project grows or as you add more features and files.
 
 ## License
 
 MIT
 
-## Credits
+---
 
-Created with ❤️ using React and GSAP
+Created with ❤️ using React, Vite, and Tailwind CSS.
